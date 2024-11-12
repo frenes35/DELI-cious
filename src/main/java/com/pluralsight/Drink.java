@@ -19,6 +19,19 @@ public class Drink {
 
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+
 
 
 
