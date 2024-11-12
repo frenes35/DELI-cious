@@ -8,4 +8,13 @@ public class Chips {
         this.type = type;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+
 }
