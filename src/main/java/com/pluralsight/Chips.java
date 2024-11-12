@@ -16,5 +16,10 @@ public class Chips {
         return type;
     }
 
+    @Override
+    public String toString() {
+        return type + " Chips ($" + price + ")";
+    }
+
 
 }
