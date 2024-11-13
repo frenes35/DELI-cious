@@ -18,9 +18,6 @@ public abstract class Topping {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return name + " ($" + price + ")";
-    }
+
 }
 
