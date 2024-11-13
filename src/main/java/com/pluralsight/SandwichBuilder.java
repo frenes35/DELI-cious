@@ -52,4 +52,30 @@ public class SandwichBuilder {
         }
         return cheeses;
     }
+
+    private List<Topping> selectRegularToppings() {
+        List<Topping> regularToppings = new ArrayList<>();
+        String[] availableToppings = {
+                "Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos",
+                "Cucumbers", "Pickles", "Guacamole", "Mushrooms"
+        };
+        System.out.println("Choose regular toppings you want to add (Leave blank and press Enter to skip):");
+        for (int i = 0; i < availableToppings.length; i++) {
+            System.out.println((i + 1) + ") " + availableToppings[i]);
+        }
+        System.out.print("Enter your choices, separated by commas (e.g., 1,3,5): ");
+        String selection = scanner.nextLine();
+        if (!selection.isBlank()) {
+            String[] selectedToppings = selection.split(",");
+            for (String selected : selectedToppings) {
+                int index = Integer.parseInt(selected.trim()) - 1;
+                if (index >= 0 && index < availableToppings.length) {
+                    regularToppings.add(new RegularTopping(availableToppings[index]));
+                } else {
+                    System.out.println("Invalid choice: " + (index + 1));
+                }
+            }
+        }
+        return regularToppings;
+    }
 }
