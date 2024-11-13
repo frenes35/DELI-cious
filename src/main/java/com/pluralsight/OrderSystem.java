@@ -13,4 +13,10 @@ public class OrderSystem {
         }
 
     }
+
+    private static void startNewOrder() {
+        Order order = new Order();
+        OrderMenu orderMenu = new OrderMenu(order);
+        orderMenu.displayOrderMenu();
+    }
 }
