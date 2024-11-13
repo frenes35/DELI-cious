@@ -1,4 +1,7 @@
 package com.pluralsight;
 
-public class RegularTopping {
+public class RegularTopping extends Topping {
+    public RegularTopping(String name) {
+        super(name, 0.0);
+    }
 }
