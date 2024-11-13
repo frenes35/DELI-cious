@@ -28,4 +28,11 @@ public class OrderMenu {
 
         }
     }
+
+    private void addSandwich() {
+        SandwichBuilder sandwichBuilder = new SandwichBuilder();
+        Sandwich sandwich = sandwichBuilder.buildSandwich();
+        order.addSandwich(sandwich);
+        System.out.println("Sandwich added to order.");
+    }
 }
