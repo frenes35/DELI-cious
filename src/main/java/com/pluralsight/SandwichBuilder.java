@@ -78,4 +78,27 @@ public class SandwichBuilder {
         }
         return regularToppings;
     }
+
+    private List<Sauce> selectSauces() {
+        List<Sauce> sauces = new ArrayList<>();
+        String[] availableSauces = {"Ketchup", "Mayonnaise", "Mustard", "BBQ"};
+        System.out.println("Choose sauces you want to add (Leave blank and press Enter to skip):");
+        for (int i = 0; i < availableSauces.length; i++) {
+            System.out.println((i + 1) + ") " + availableSauces[i]);
+        }
+        System.out.print("Enter your choices, separated by commas (e.g., 1,3):  ");
+        String selection = scanner.nextLine();
+        if (!selection.isBlank()) {
+            String[] selectedSauces = selection.split(",");
+            for (String selected : selectedSauces) {
+                int index = Integer.parseInt(selected.trim()) - 1;
+                if (index >= 0 && index < availableSauces.length) {
+                    sauces.add(new Sauce(availableSauces[index]));
+                } else {
+                    System.out.println("Invalid choice: " + (index + 1));
+                }
+            }
+        }
+        return sauces;
+    }
 }
