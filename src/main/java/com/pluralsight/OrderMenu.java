@@ -35,4 +35,11 @@ public class OrderMenu {
         order.addSandwich(sandwich);
         System.out.println("Sandwich added to order.");
     }
+
+    private void addDrink() {
+        DrinkBuilder drinkBuilder = new DrinkBuilder();
+        Drink drink = drinkBuilder.buildDrink();
+        order.addDrink(drink);
+        System.out.println("Drink added to order.");
+    }
 }
