@@ -16,4 +16,21 @@ public class Sandwich {
         this.toppings = toppings;
         this.sauces = sauces;
     }
+
+    public double calculatePrice() {
+        double basePrice = 0;
+        if (size.equals("4")) {
+            basePrice = 5.50;
+        } else if (size.equals("8")) {
+            basePrice = 7.00;
+        } else if (size.equals("12")) {
+            basePrice = 8.50;
+        }
+
+        double toppingsCost = 0;
+        for (Topping topping : toppings) {
+            toppingsCost += topping.getPrice();
+        }
+        return basePrice + toppingsCost;
+    }
 }
