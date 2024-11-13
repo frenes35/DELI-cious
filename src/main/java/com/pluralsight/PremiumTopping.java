@@ -1,4 +1,4 @@
 package com.pluralsight;
 
-public class PremiumTopping ex{
+public class PremiumTopping {
 }
