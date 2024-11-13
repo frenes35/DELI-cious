@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class OrderSystem {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
 
         boolean running = true;
         while (running) {
@@ -11,7 +13,7 @@ public class OrderSystem {
             System.out.println("1) New Order");
             System.out.println("0) Exit");
             System.out.print("Your choice: ");
-            Scanner scanner = null;
+
             int choice = scanner.nextInt();
             scanner.nextLine();
             if (choice == 1) {
@@ -26,7 +28,7 @@ public class OrderSystem {
 
         }
 
-    
+
 
     private static void startNewOrder() {
         Order order = new Order();
