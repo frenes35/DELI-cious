@@ -24,6 +24,21 @@ public class OrderMenu {
             System.out.print("Your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
+            if (choice == 1) {
+                addSandwich();
+            } else if (choice == 2) {
+                addDrink();
+            } else if (choice == 3) {
+                addChips();
+            } else if (choice == 4) {
+                checkout();
+                ordering = false;
+            } else if (choice == 0) {
+                System.out.println("Order canceled.");
+                ordering = false;
+            } else {
+                System.out.println("Invalid choice. Please try again.");
+            }
 
 
         }
