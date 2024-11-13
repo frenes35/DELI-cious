@@ -50,4 +50,13 @@ public class OrderMenu {
         order.addChips(chips);
         System.out.println(type + " Chips added to order.");
     }
+    private void checkout() {
+        System.out.println("\n--- Order Summary ---");
+        System.out.println(order);
+        System.out.println("Total Amount: $" + order.calculateTotal());
+        Receipt.saveOrder(order);
+        System.out.println("Order completed and receipt saved.");
+    }
+
+
 }
