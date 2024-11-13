@@ -40,5 +40,21 @@ public class Order {
         return sandwichTotal + drinkTotal + chipsTotal;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Order Summary:\n");
+        for (Sandwich sandwich : sandwiches) {
+            sb.append(sandwich.toString()).append("\n");
+        }
+        for (Drink drink : drinks) {
+            sb.append(drink.toString()).append("\n");
+        }
+        for (Chips chip : chips) {
+            sb.append(chip.toString()).append("\n");
+        }
+        return sb.toString();
+    }
+
 
 }
