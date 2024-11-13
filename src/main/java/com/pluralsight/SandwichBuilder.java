@@ -29,4 +29,27 @@ public class SandwichBuilder {
         }
         return meats;
     }
+
+    private List<Topping> selectCheeses() {
+        List<Topping> cheeses = new ArrayList<>();
+        String[] availableCheeses = {"American", "Provolone", "Cheddar", "Swiss"};
+        System.out.println("Choose cheeses you want to add (Leave blank and press Enter to skip):");
+        for (int i = 0; i < availableCheeses.length; i++) {
+            System.out.println((i + 1) + ") " + availableCheeses[i]);
+        }
+        System.out.print("Enter your choices, separated by commas (e.g., 1,3): ");
+        String selection = scanner.nextLine();
+        if (!selection.isBlank()) {
+            String[] selectedCheeses = selection.split(",");
+            for (String selected : selectedCheeses) {
+                int index = Integer.parseInt(selected.trim()) - 1;
+                if (index >= 0 && index < availableCheeses.length) {
+                    cheeses.add(new PremiumTopping(availableCheeses[index], 0.75));
+                } else {
+                    System.out.println("Invalid choice: " + (index + 1));
+                }
+            }
+        }
+        return cheeses;
+    }
 }
