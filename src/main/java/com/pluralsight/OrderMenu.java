@@ -42,4 +42,12 @@ public class OrderMenu {
         order.addDrink(drink);
         System.out.println("Drink added to order.");
     }
+
+    private void addChips() {
+        System.out.print("Select chips type. (Plain/BBQ/Sour Cream): ");
+        String type = scanner.nextLine();
+        Chips chips = new Chips(type);
+        order.addChips(chips);
+        System.out.println(type + " Chips added to order.");
+    }
 }
