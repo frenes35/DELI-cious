@@ -26,7 +26,7 @@ public class SandwichBuilder {
 
     private List<Topping> selectMeats() {
         List<Topping> meats = new ArrayList<>();
-        String[] availableMeats = {"Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon"};
+        String[] availableMeats = {"Steak", "Salami", "Ham", "Roast Beef", "Chicken", "Bacon"};
         System.out.println("Choose meats you want to add (Leave blank and press Enter to skip):");
         for (int i = 0; i < availableMeats.length; i++) {
             System.out.println((i + 1) + ") " + availableMeats[i]);
