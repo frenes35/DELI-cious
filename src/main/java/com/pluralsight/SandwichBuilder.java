@@ -7,6 +7,23 @@ public class SandwichBuilder {
 
     private Scanner scanner = new Scanner(System.in);
 
+    public Sandwich buildSandwich() {
+        System.out.println("\n--- Sandwich Maker ---");
+        System.out.print("Size (4/8/12): ");
+        String size = scanner.nextLine();
+        System.out.print("Bread type (white/wheat/rye/wrap): ");
+        String bread = scanner.nextLine();
+        System.out.print("Toasted ? (yes/no): ");
+        boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
+        List<Topping> toppings = new ArrayList<>();
+        toppings.addAll(selectMeats());
+        toppings.addAll(selectCheeses());
+        toppings.addAll(selectRegularToppings());
+        List<Sauce> sauces = selectSauces();
+        return new Sandwich(size, bread, toasted, toppings, sauces);
+    }
+
+
     private List<Topping> selectMeats() {
         List<Topping> meats = new ArrayList<>();
         String[] availableMeats = {"Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon"};
