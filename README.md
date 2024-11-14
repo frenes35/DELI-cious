@@ -3,7 +3,7 @@
 Deli-cious Order System
 
 ## Description of the Project
-
+![diagram.png](diagram.png)
 The Deli-cious Order System is a simple app that lets users order sandwiches,
 drinks, and chips. Users can choose sandwich size, bread type, toppings, sauces,
 drink flavors, and chip types to customize their order.
